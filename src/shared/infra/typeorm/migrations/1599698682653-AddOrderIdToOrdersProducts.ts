@@ -21,9 +21,9 @@ export default class AddOrderIdToOrdersProducts1599698682653
       'orders_products',
       new TableForeignKey({
         name: 'OrdersProductsOrders',
-        columnNames: ['customer_id'],
+        columnNames: ['order_id'],
         referencedColumnNames: ['id'],
-        referencedTableName: 'customers',
+        referencedTableName: 'orders',
         onDelete: 'SET NULL',
       }),
     );
