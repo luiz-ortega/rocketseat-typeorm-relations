@@ -11,7 +11,7 @@ import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProduct
 
 @Entity('products')
 class Product {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column()
@@ -23,7 +23,7 @@ class Product {
   @Column('int')
   quantity: number;
 
-  @OneToMany(() => OrdersProducts, order_products => order_products.product)
+  // @OneToMany(() => OrdersProducts, order_products => order_products.product)
   order_products: OrdersProducts[];
 
   @CreateDateColumn()

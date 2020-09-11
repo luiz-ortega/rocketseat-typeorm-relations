@@ -14,14 +14,14 @@ import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProduct
 
 @Entity('orders')
 class Order {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
-  customer: Customer;
+  // @Column()
+  // customer: Customer;
 
-  @Column()
-  order_products: OrdersProducts[];
+  // @Column()
+  // order_products: OrdersProducts[];
 
   @CreateDateColumn()
   created_at: Date;
